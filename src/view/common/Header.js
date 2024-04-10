@@ -82,14 +82,14 @@ const Menu = styled.ul`
   align-items: center;
   margin-right: 10px;
   gap: 5px;
-  @media (max-width: 950px) {
+  @media (max-width: 960px) {
     display: none;
   }
 `;
 
 const MobileMenu = styled.div`
   display: none;
-  @media (max-width: 950px) {
+  @media (max-width: 960px) {
     display: block;
   }
 `;
@@ -174,7 +174,7 @@ const MobileMenuItem = styled.div`
     scrollbar-width: none; / Firefox /
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 960px) {
     display: none;
   }
 `;
