@@ -11,51 +11,59 @@ const Header = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#6d0202" }}>
-      <Container>
-        <Navbar>
-          <LogoBox>
-            <Link to="/">
-              <Logo src="./img/logot1.png" alt="Logo"></Logo>
-            </Link>
-          </LogoBox>
-          <Menu>
-            <CustomLink to="/">Home</CustomLink>
-            <CustomLink to="/about">About Us</CustomLink>
-            <CustomLink to="/pages">Pages</CustomLink>
-            <CustomLink to="/blog">Blog</CustomLink>
-            <CustomLink to="/contact">Contact</CustomLink>
-            <Button>
+    <HeaderContainer>
+      <div style={{ backgroundColor: "#6d0202" }}>
+        <Container>
+          <Navbar>
+            <LogoBox>
+              <Link to="/">
+                <Logo src="./img/logot1.png" alt="Logo"></Logo>
+              </Link>
+            </LogoBox>
+            <Menu>
+              <CustomLink to="/">Home</CustomLink>
+              <CustomLink to="/about">About Us</CustomLink>
+              <CustomLink to="/pages">Contact</CustomLink>
+              <CustomLink to="/blog">Privacy & policy</CustomLink>
+              <CustomLink to="/contact">Terms & condition</CustomLink>
+              <Button>
+                Find Tipster <i class="fa-solid fa-user"></i>
+              </Button>
+            </Menu>
+            <MobileMenu>
+              <IconButton sx={{ color: "white" }}>
+                <MenuIcon fontSize="large" onClick={handleClick} />
+              </IconButton>
+            </MobileMenu>
+          </Navbar>
+        </Container>
+        <div style={{ position: "relative" }}>
+          <MobileMenuItem hidden={!isOpen}>
+            <MobileCustomLink to="/">Home</MobileCustomLink>
+            <MobileCustomLink to="/about">About Us</MobileCustomLink>
+            <MobileCustomLink to="/pages">Contact</MobileCustomLink>
+            <MobileCustomLink to="/blog">Privacy & policy</MobileCustomLink>
+            <MobileCustomLink to="/contact">Terms & condition</MobileCustomLink>
+            <MenuButton>
               Find Tipster <i class="fa-solid fa-user"></i>
-            </Button>
-          </Menu>
-          <MobileMenu>
-            <IconButton sx={{ color: "white" }}>
-              <MenuIcon fontSize="large" onClick={handleClick} />
-            </IconButton>
-          </MobileMenu>
-        </Navbar>
-      </Container>
-      <div style={{ position: "relative" }}>
-        <MobileMenuItem hidden={!isOpen}>
-          <MobileCustomLink to="/">Home</MobileCustomLink>
-          <MobileCustomLink to="/about">About Us</MobileCustomLink>
-          <MobileCustomLink to="/pages">Pages</MobileCustomLink>
-          <MobileCustomLink to="/blog">Blog</MobileCustomLink>
-          <MobileCustomLink to="/contact">Contact</MobileCustomLink>
-          <MenuButton>
-            Find Tipster <i class="fa-solid fa-user"></i>
-          </MenuButton>
-        </MobileMenuItem>
+            </MenuButton>
+          </MobileMenuItem>
+        </div>
       </div>
-    </div>
+    </HeaderContainer>
   );
 };
 
 export default Header;
 
+const HeaderContainer = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 999;
+`;
+
 const Container = styled.div`
-  max-width: 1285px;
+  max-width: 85%;
   margin: 0 auto;
 `;
 
@@ -73,23 +81,32 @@ const LogoBox = styled.div`
 
 const Logo = styled.img`
   width: 320px;
+  @media (max-width: 1140px) {
+    width: 300px;
+  }
+  @media (max-width: 690px) {
+    width: 290px;
+  }
+  @media (max-width: 430px) {
+    width: 235px;
+  }
 `;
 
 const Menu = styled.ul`
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
   align-items: center;
   margin-right: 10px;
-  gap: 5px;
-  @media (max-width: 960px) {
+  gap: 10px;
+  @media (max-width: 1140px) {
     display: none;
   }
 `;
 
 const MobileMenu = styled.div`
   display: none;
-  @media (max-width: 960px) {
+  @media (max-width: 1140px) {
     display: block;
   }
 `;
@@ -109,18 +126,19 @@ const Button = styled.button`
   background-color: white;
   color: #6d0202;
   padding: 12px 22px;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   cursor: pointer;
+  border: 2px solid #6d0202;
   border-radius: 5px;
 
   transition: all 1s;
   &:hover {
     color: #6d0202;
     border-radius: 50px;
-    border: 2px solid black;
-    background-color: #f4c566;
+    border: 2px solid #6d0202;
+    background-color: #f7d689;
     transition: all 1s ease 0s;
   }
 `;
@@ -174,7 +192,7 @@ const MobileMenuItem = styled.div`
     scrollbar-width: none; / Firefox /
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: 1140px) {
     display: none;
   }
 `;

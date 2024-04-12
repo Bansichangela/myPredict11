@@ -3,3 +3,16 @@
   padding: 0;
   box-shadow: border-box;
 }
+
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
+  /* background-color: rgb(60, 86, 235);  */
+}
+
+.root {
+  min-height: 100vh;
+}
