@@ -55,6 +55,7 @@ const Content = styled.div`
 
 const Title = styled.h1`
   color: #6d0202;
+  padding-bottom: 35px;
   font-size: 55px;
   text-align: center;
   @media (max-width: 1140px) {
@@ -72,20 +73,38 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  background-color: white;
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
   color: #6d0202;
-  padding: 12px 22px;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  cursor: pointer;
-  // border: 2px solid white;
-  border-radius: 5px;
-  margin-top: 20px;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #6d0202;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
 
   &:hover {
-    background-color: #f4c566;
-    color: #6d0202;
-    // border: 2px solid #6d0202;
+    color: #e8e8e8;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 `;
