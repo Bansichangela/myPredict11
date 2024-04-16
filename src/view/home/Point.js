@@ -105,8 +105,7 @@ const Point = () => {
 export default Point;
 
 const Container = styled.div`
-  margin-bottom: 50px;
-  background-color: #6d0202;
+  background-color: var(--color-primary);
 `;
 
 const Details = styled.div`
@@ -136,7 +135,6 @@ const Average = styled.div`
 const Averageimg = styled.div`
   width: 100px
   padding: 20px;
- 
 `;
 
 const AveragePoint = styled.div`
@@ -162,6 +160,7 @@ const PredictorImg = styled.div`
 const InformationItem = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 45px;
   // flex-direction: column;
   align-items: center;
   flex-wrap: wrap;

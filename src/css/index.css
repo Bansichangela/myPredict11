@@ -3,6 +3,10 @@
   padding: 0;
   box-shadow: border-box;
 }
+:root {
+  --color-primary: #7924c7;
+  --text-color: #6d0202;
+}
 
 html {
   font-size: 62.5%; /*1rem = 10px*/

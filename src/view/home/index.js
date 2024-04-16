@@ -3,6 +3,8 @@ import Header from "../common/Header";
 import Landing from "./Landing";
 import Footer from "../common/Footer";
 import Point from "./Point";
+import TopPredictor from "./TopPredictor";
+import Steps from "./Steps";
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <Header />
       <Landing />
       <Point />
+      <TopPredictor />
+      <Steps />
       <Footer />
     </>
   );

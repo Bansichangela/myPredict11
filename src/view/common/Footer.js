@@ -109,7 +109,7 @@ export default Footer;
 
 const Container = styled.div`
   padding: 10px;
-  background-color: #6d0202;
+  background-color: var(--color-primary);
 `;
 
 const Contain = styled.div`

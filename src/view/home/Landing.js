@@ -32,7 +32,7 @@ const BackgroundImage = styled.div`
   height: 100%;
   background-image: url("./img/bg-3image.jpg");
   background-size: cover;
-  filter: blur(2.5px); /* Adjust the blur amount as needed */
+  filter: blur(2.3px); /* Adjust the blur amount as needed */
   z-index: -1; /* Send the background image to the bottom */
 `;
 
@@ -54,7 +54,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #6d0202;
+  color: white;
   padding-bottom: 35px;
   font-size: 55px;
   text-align: center;
@@ -76,7 +76,7 @@ const Button = styled.button`
   padding: 15px 25px;
   border: unset;
   border-radius: 15px;
-  color: #6d0202;
+  color: var(--color-primary);
   z-index: 1;
   background: #e8e8e8;
   position: relative;
@@ -94,10 +94,10 @@ const Button = styled.button`
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: #6d0202;
+    background-color: var(--color-primary);
     z-index: -1;
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    transition: all 250ms;
+    transition: all 400ms;
   }
 
   &:hover {

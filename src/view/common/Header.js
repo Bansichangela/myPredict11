@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div style={{ backgroundColor: "#6d0202" }}>
+      <div style={{ backgroundColor: "var(--color-primary)" }}>
         <Container>
           <Navbar>
             <LogoBox>
@@ -124,20 +124,20 @@ const CustomLink = styled(Link)`
 
 const Button = styled.button`
   background-color: white;
-  color: #6d0202;
+  color: var(--color-primary);
   padding: 12px 22px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  border: 2px solid #6d0202;
+  border: 2px solid var(--color-primary);
   border-radius: 5px;
 
   transition: all 1s;
   &:hover {
-    color: #6d0202;
+    color: --color-primary;
     border-radius: 50px;
-    border: 2px solid #6d0202;
+    border: 2px solid --color-primary;
     background-color: #f7d689;
     transition: all 1s ease 0s;
   }
