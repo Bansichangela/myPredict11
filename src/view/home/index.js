@@ -5,6 +5,7 @@ import Footer from "../common/Footer";
 import Point from "./Point";
 import TopPredictor from "./TopPredictor";
 import Steps from "./Steps";
+import Match from "./Match";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Point />
       <TopPredictor />
       <Steps />
+      <Match />
       <Footer />
     </>
   );

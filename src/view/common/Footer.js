@@ -91,10 +91,10 @@ const Footer = () => {
         </Contain>
         <Contact>
           <Phone>
-            <i class="fa-solid fa-phone-volume"></i> +789-5565886
+            <i className="fa-solid fa-phone-volume"></i> +789-5565886
           </Phone>
           <Mail>
-            <i class="fa-solid fa-envelope"></i> yourmail@gmail.com
+            <i className="fa-solid fa-envelope"></i> yourmail@gmail.com
           </Mail>
         </Contact>
       </Container>

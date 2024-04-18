@@ -87,16 +87,34 @@ const StepLineheading = styled.div`
   @media (max-width: 1270px) {
     font-size: 45px;
   }
+  @media (max-width: 690px) {
+    f0nt-size: 40px;
+  }
+  @media (max-width: 495px) {
+    font-size: 35px;
+  }
+  @media (max-width: 410px) {
+    font-size: 30px;
+  }
 `;
 
 const StepLine = styled.div`
-text-Align: center;
-font-Size: 20px;
-font-Weight: 600;
-@media (max-width: 1270px) {
-  font-size: 17px;
-}
-  }`;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  @media (max-width: 1270px) {
+    font-size: 17px;
+  }
+  @media (max-width: 690px) {
+    font-size: 15px;
+  }
+  @media (max-width: 495px) {
+    font-size: 13px;
+  }
+  @media (max-width: 410px) {
+    font-size: 10px;
+  }
+`;
 
 const Step = styled.div`
   margin-top: 50px;
@@ -105,11 +123,15 @@ const Step = styled.div`
 const Step1 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 325px;
   align-items: center;
+  @media (max-width: 690px) {
+    flex-direction: column;
+  }
 `;
 
 const StepImg1 = styled.div`
+  width: 30%;
+
   img {
     width: 400px;
     @media (max-width: 1270px) {
@@ -118,11 +140,28 @@ const StepImg1 = styled.div`
     @media (max-width: 1170px) {
       width: 300px;
     }
+    @media (max-width: 1010px) {
+      width: 250px;
+    }
+    @media (max-width: 750px) {
+      width: 200px;
+    }
+    @media (max-width: 495px) {
+      width: 150px;
+    }
+    @media (max-width: 410px) {
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 690px) {
+    width: 70%;
   }
 `;
 
 const StepDetail = styled.div`
   display: flex;
+  width: 40%;
   flex-direction: column;
   font-size: 20px;
   @media (max-width: 1270px) {
@@ -130,6 +169,23 @@ const StepDetail = styled.div`
   }
   @media (max-width: 1170px) {
     font-size: 15px;
+  }
+  @media (max-width: 1010px) {
+    font-size: 13px;
+  }
+  @media (max-width: 690px) {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 495px) {
+    font-size: 10px;
+  }
+  @media (max-width: 410px) {
+    font-size: 8px;
+    gap: 0px;
   }
 `;
 
@@ -140,8 +196,11 @@ const Arrow = styled.div`
     @media (max-width: 1270px) {
       width: 200px;
     }
-    @media (max-width: 980px) {
-      width: 170px;
+    @media (max-width: 1150px) {
+      display: none;
+    }
+    @media (max-width: 830px) {
+      width: 200px;
     }
   }
 `;
@@ -149,11 +208,15 @@ const Arrow = styled.div`
 const Step2 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 325px;
   align-items: center;
+  @media (max-width: 690px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 const StepImg2 = styled.div`
+  width: 30%;
   img {
     width: 400px;
     @media (max-width: 1270px) {
@@ -161,6 +224,18 @@ const StepImg2 = styled.div`
     }
     @media (max-width: 1170px) {
       width: 300px;
+    }
+    @media (max-width: 1010px) {
+      width: 250px;
+    }
+    @media (max-width: 750px) {
+      width: 200px;
+    }
+    @media (max-width: 495px) {
+      width: 150px;
+    }
+    @media (max-width: 410px) {
+      width: 100px;
     }
   }
 `;
@@ -168,11 +243,15 @@ const StepImg2 = styled.div`
 const Step3 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 325px;
   align-items: center;
+  padding-bottom: 30px;
+  @media (max-width: 690px) {
+    flex-direction: column;
+  }
 `;
 
 const StepImg3 = styled.div`
+  width: 30%;
   img {
     width: 400px;
     @media (max-width: 1270px) {
@@ -180,6 +259,18 @@ const StepImg3 = styled.div`
     }
     @media (max-width: 1170px) {
       width: 300px;
+    }
+    @media (max-width: 1010px) {
+      width: 250px;
+    }
+    @media (max-width: 750px) {
+      width: 200px;
+    }
+    @media (max-width: 495px) {
+      width: 150px;
+    }
+    @media (max-width: 410px) {
+      width: 100px;
     }
   }
 `;

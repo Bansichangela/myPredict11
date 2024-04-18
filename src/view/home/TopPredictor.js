@@ -39,24 +39,38 @@ const data = [
     points: 10,
     link: "",
   },
+  {
+    imageLink: "./img/bettingimage.png",
+    name: "GOLI SHARMA",
+    points: 30,
+    link: "",
+  },
+  {
+    imageLink: "./img/bettingimage.png",
+    name: "POPAT NAYAK",
+    points: 40,
+    link: "",
+  },
 ];
 
 const Card = () => {
-  console.log(data);
   return (
     <>
       {data.map((item, index) => (
-        <Box>
-          {console.log(item)}
-          <div style={{ height: "72px" }}>
-            <img src={item.imageLink} alt="betting"></img>
+        <Box key={index}>
+          <div style={{ height: "72px", width: "100%" }}>
+            <img
+              src={item.imageLink}
+              alt="betting"
+              style={{ width: "100%", height: "82px" }}
+            ></img>
           </div>
           <Profileimg>
             <img
               src="./img/profileimg.jpg"
               alt="profile"
               style={{
-                width: "100px",
+                width: "90px",
                 borderRadius: "100%",
               }}
             ></img>
@@ -181,21 +195,22 @@ const PredictorLine = styled.div`
 
 const Boxes = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
   font-size: 15px;
+  gap: 10px;
   color: white;
-  justify-items: center;
   @media (max-width: 1230px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 845px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
 const Box = styled.div`
-  margin-bottom: 20px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -211,6 +226,8 @@ const Profileimg = styled.div`
   justify-content: center;
   height: 20px;
   line-height: 1;
+  @media (max-width: 1120px) {
+  }
 `;
 
 const Predictor1 = styled.div`

@@ -27,12 +27,12 @@ const Header = () => {
               <CustomLink to="/blog">Privacy & policy</CustomLink>
               <CustomLink to="/contact">Terms & condition</CustomLink>
               <Button>
-                Find Tipster <i class="fa-solid fa-user"></i>
+                Find Tipster <i className="fa-solid fa-user"></i>
               </Button>
             </Menu>
             <MobileMenu>
-              <IconButton sx={{ color: "white" }}>
-                <MenuIcon fontSize="large" onClick={handleClick} />
+              <IconButton style={{ color: "white" }} onClick={handleClick}>
+                <MenuIcon fontSize="large" />
               </IconButton>
             </MobileMenu>
           </Navbar>
@@ -45,7 +45,7 @@ const Header = () => {
             <MobileCustomLink to="/blog">Privacy & policy</MobileCustomLink>
             <MobileCustomLink to="/contact">Terms & condition</MobileCustomLink>
             <MenuButton>
-              Find Tipster <i class="fa-solid fa-user"></i>
+              Find Tipster <i className="fa-solid fa-user"></i>
             </MenuButton>
           </MobileMenuItem>
         </div>
@@ -80,7 +80,7 @@ const LogoBox = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 320px;
+  width: 310px;
   @media (max-width: 1140px) {
     width: 300px;
   }
