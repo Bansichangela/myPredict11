@@ -23,8 +23,10 @@ const Steps = () => {
               <img src="./img/step1.png" alt="step"></img>
             </StepImg1>
             <StepDetail>
-              <h1>01. Select Match</h1>
-              <p>
+              <h1 style={{ color: "#d17f1b", paddingBottom: "10px" }}>
+                01. Select Match
+              </h1>
+              <p style={{ color: "#0c0338", fontSize: "16px" }}>
                 Select Match We make it very easy for you to find the data
                 analysis and predictor with 99% accuracy statistics we provide,
                 you can choose best player 30 second.
@@ -36,10 +38,13 @@ const Steps = () => {
           </Arrow>
           <Step2>
             <StepDetail>
-              <h1>02. Fantasy analysis</h1>
-              <p>
+              <h1 style={{ color: "#d17f1b", paddingBottom: "10px" }}>
+                02. Fantasy analysis
+              </h1>
+              <p style={{ color: "#0c0338", fontSize: "16px" }}>
                 Find your match winners by viewing detailed information of every
-                player
+                player for Powerplay bowler and batter with 99% accuracy
+                statistics we provide you can choose best player 30 second.
               </p>
             </StepDetail>
             <StepImg2>
@@ -54,8 +59,13 @@ const Steps = () => {
               <img src="./img/step3.png" alt="step3"></img>
             </StepImg3>
             <StepDetail>
-              <h1>03. Create your team</h1>
-              <p>Start creating your winning teams!</p>
+              <h1 style={{ color: "#d17f1b", paddingBottom: "10px" }}>
+                03. Create your team
+              </h1>
+              <p style={{ color: "#0c0338", fontSize: "16px" }}>
+                Start creating your winning teams! and make predictions with our
+                pridection system
+              </p>
             </StepDetail>
           </Step3>
         </Step>
@@ -69,7 +79,7 @@ export default Steps;
 const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 50px;
-  background-color: #af87bf;
+  background-color: #f1f1f1;
 `;
 
 const Text = styled.div`
@@ -79,7 +89,8 @@ const Text = styled.div`
 `;
 
 const StepLineheading = styled.div`
-  font-size: 55px;
+  color: #0c0338;
+  font-size: 45px;
   font-weight: 700;
   margin-top: 41px;
   margin-bottom: 25px;
@@ -99,9 +110,9 @@ const StepLineheading = styled.div`
 `;
 
 const StepLine = styled.div`
+  color: #d17f1b;
   text-align: center;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
   @media (max-width: 1270px) {
     font-size: 17px;
   }

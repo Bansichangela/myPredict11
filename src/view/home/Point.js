@@ -9,22 +9,25 @@ const Point = () => {
           <Title>
             <div
               style={{
-                color: "#f7d689",
-                display: "flex",
-                justifyContent: "center",
-                paddingBottom: "15px",
-              }}
-            >
-              Number Said More Than Words
-            </div>
-            <div
-              style={{
                 display: "flex",
                 justifyContent: "center",
                 color: "white",
               }}
             >
               <h2>The Numbers Don't Lie</h2>
+            </div>
+
+            <div
+              style={{
+                color: "#d17f1b",
+                display: "flex",
+                justifyContent: "center",
+                paddingTop: "10px",
+                paddingBottom: "15px",
+                fontSize: "24px",
+              }}
+            >
+              Number Said More Than Words
             </div>
           </Title>
 
@@ -116,9 +119,9 @@ const Details = styled.div`
 
 const Title = styled.div`
   margin: 0 auto;
-  padding: 70px 0 30px 0;
+  padding: 50px 0 30px 0;
   color: black;
-  font-size: 40px;
+  font-size: 33px;
   @media (max-width: 1130px) {
     font-size: 30px;
     @media (max-width: 645px) {

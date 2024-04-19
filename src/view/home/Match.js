@@ -180,8 +180,7 @@ export default Match;
 
 const Container = styled.div`
   //   background-color: var(--color-primary);
-
-  background-color: #feddb3;
+  //   background-color: #feddb3;
 `;
 
 const Title = styled.div`
@@ -193,9 +192,9 @@ const Title = styled.div`
 `;
 
 const Name = styled.h1`
+  color: #0c0338;
   font-weight: 700;
   font-size: 50px;
-  margin-top: 35px;
   margin-bottom: 10px;
   @media (max-width: 870px) {
     font-size: 45px;
@@ -206,8 +205,10 @@ const Name = styled.h1`
 `;
 
 const NameDescription = styled.h2`
+  color: #0c0338;
+  opacity: 0.7;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   @media (max-width: 870px) {
     font-size: 15px;
@@ -218,7 +219,7 @@ const NameDescription = styled.h2`
 `;
 
 const Boxes = styled.div`
-  max-width: 85%;
+  max-width: 84%;
   margin: 0 auto;
   margin-bottom: 30px;
   display: grid;
@@ -233,11 +234,12 @@ const Box = styled.div`
   text-align: center;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: #7924c7;
+  background-color: #0c0338;
 `;
 
 const DateTime = styled.div`
   padding: 10px 20px;
+  color: yellow;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -249,7 +251,8 @@ const Team = styled.div`
   margin: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #af87bf;
+  color: white;
+  background-color: #253254;
 `;
 
 const IPL = styled.div`

@@ -138,7 +138,7 @@ const Button = styled.button`
     color: --color-primary;
     border-radius: 50px;
     border: 2px solid --color-primary;
-    background-color: #f7d689;
+    background-color: #d17f1b;
     transition: all 1s ease 0s;
   }
 `;

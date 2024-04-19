@@ -1,19 +1,48 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { animated, config, useSpring } from "react-spring";
 import styled from "styled-components";
 
 const Landing = () => {
+  const ref = useRef();
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [inViewRef, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const props = useSpring({
+    opacity: !hasAnimated ? (inView ? 1 : 0) : 1,
+    transform: !hasAnimated
+      ? inView
+        ? "translateX(0)"
+        : "translateX(-100px)"
+      : "translateX(0)",
+    config: config.gentle,
+    from: { opacity: 0, transform: "translateX(-100%)" },
+    onRest: () => {
+      if (inView && !hasAnimated) {
+        setHasAnimated(true);
+      }
+    },
+  });
   return (
-    <>
+    <div ref={inViewRef}>
       <BlurredBackground>
         <BackgroundImage />
-        <Container>
-          <Content>
-            <Title>INVEST BID A LITTLE & GET MORE PROFITABLE PLAY</Title>
-            <Button>Get Started Now</Button>
-          </Content>
-        </Container>
+        <Div>
+          <Container>
+            <Content>
+              <LandingItem style={props} ref={ref}>
+                <Title>INVEST BID A LITTLE & GET</Title>
+                <Title> MORE PROFITABLE PLAY</Title>
+                <Button>Get Started Now</Button>
+              </LandingItem>
+            </Content>
+          </Container>
+        </Div>
       </BlurredBackground>
-    </>
+    </div>
   );
 };
 
@@ -30,50 +59,65 @@ const BackgroundImage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./img/bg-3image.jpg");
+  background-image: url("./img/bgimg.webp");
   background-size: cover;
-  filter: blur(2.3px); /* Adjust the blur amount as needed */
   z-index: -1; /* Send the background image to the bottom */
 `;
 
+const Div = styled.div`
+  max-width: 88%;
+  margin: 0 auto;
+  @media (max-width: 990px) {
+    max-width: 83%;
+  }
+`;
+
 const Container = styled.div`
+  height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: 80%;
-  margin: 0 auto;
-  height: 100%;
+
+  @media (max-width: 990px) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+`;
+
+const LandingItem = styled(animated.div)`
+  padding: 30px;
+  @media (max-width: 990px) {
+    padding: 0 0 0 0;
+  }
 `;
 
 const Title = styled.h1`
   color: white;
-  padding-bottom: 35px;
-  font-size: 55px;
-  text-align: center;
-  @media (max-width: 1140px) {
-    font-size: 45px;
+  font-size: 40px;
+  padding: 5px 0;
+  margin: 0;
+  @media (max-width: 1100px) {
+    font-size: 38px;
   }
-  @media (max-width: 690px) {
-    font-size: 40px;
+  @media (max-width: 990px) {
+    font-size: 37px;
   }
-  @media (max-width: 450px) {
-    font-size: 35px;
+  @media (max-width: 630px) {
+    font-size: 32px;
   }
-  @media (max-width: 350px) {
-    font-size: 30px;
+  @media (max-width: 530px) {
+    font-size: 28px;
   }
 `;
 
 const Button = styled.button`
-  padding: 15px 25px;
+  margin-top: 20px;
+  padding: 12px 25px;
   border: unset;
   border-radius: 15px;
   color: var(--color-primary);
@@ -94,7 +138,7 @@ const Button = styled.button`
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: var(--color-primary);
+    background-color: #d17f1b;
     z-index: -1;
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 400ms;
@@ -106,5 +150,12 @@ const Button = styled.button`
 
   &:hover::before {
     width: 100%;
+  }
+
+  @media (max-width: 990px) {
+    font-weight: 700;
+  }
+  @media (max-width: 500px) {
+    font-size: 15px;
   }
 `;

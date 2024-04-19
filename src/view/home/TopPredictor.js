@@ -83,7 +83,7 @@ const Card = () => {
                 justifyContent: "center",
               }}
             >
-              <h2>{item.name}</h2>
+              <h2 style={{ color: "ff0268" }}>{item.name}</h2>
             </Predictor1>
             <div
               style={{
@@ -170,6 +170,7 @@ const Title = styled.div`
 `;
 
 const PredictorName = styled.div`
+  color: #0c0338;
   font-size: 50px;
   margin: 90px 0 15px 0;
   font-weight: 700;
@@ -182,6 +183,7 @@ const PredictorName = styled.div`
 `;
 
 const PredictorLine = styled.div`
+  color: #d17f1b;
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 35px;
@@ -197,7 +199,7 @@ const Boxes = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-size: 15px;
-  gap: 10px;
+  gap: 15px;
   color: white;
   @media (max-width: 1230px) {
     grid-template-columns: repeat(3, 1fr);
@@ -215,7 +217,17 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #7924c7;
+  background-color: #0c0338;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
+  }
 `;
 
 const Profileimg = styled.div`
@@ -237,27 +249,37 @@ const Predictor1 = styled.div`
 const ViewProfile = styled.button`
   margin-bottom: 20px;
   padding: 15px 25px;
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #ff0268;
-  background: transparent;
-  cursor: pointer;
-  transition: ease-out 0.5s;
   border: 2px solid white;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #ff0268;
+  color: #d17f1b;
+  z-index: 1;
+  background: transparent;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
 
-  &:hover {
-    color: white;
-    box-shadow: inset 0 -100px 0 0 #ff0268;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background-color: #d17f1b;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 400ms;
   }
 
-  &:active {
-    transform: scale(0.9);
+  &:hover {
+    color: #0c0338;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 `;
