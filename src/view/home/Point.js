@@ -16,7 +16,6 @@ const Point = () => {
             >
               <h2>The Numbers Don't Lie</h2>
             </div>
-
             <div
               style={{
                 color: "#d17f1b",
