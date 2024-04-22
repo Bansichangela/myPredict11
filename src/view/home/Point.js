@@ -11,7 +11,7 @@ const Point = () => {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                color: "white",
+                color: "var(--color-primary)",
               }}
             >
               <h2>The Numbers Don't Lie</h2>
@@ -49,8 +49,8 @@ const Point = () => {
                   padding: "10px",
                 }}
               >
-                <h2>176</h2>
-                <h2>Average Team</h2>
+                <h2 style={{ color: "var(--color-primary)" }}>176</h2>
+                <h2 style={{ color: "#d17f1b" }}>Average Team</h2>
               </div>
             </Average>
             <AveragePoint>
@@ -71,8 +71,8 @@ const Point = () => {
                   padding: "10px",
                 }}
               >
-                <h2>785</h2>
-                <h2>Average Point</h2>
+                <h2 style={{ color: "var(--color-primary)" }}>785</h2>
+                <h2 style={{ color: "#d17f1b" }}>Average Point</h2>
               </div>
             </AveragePoint>
             <Predictor>
@@ -93,8 +93,8 @@ const Point = () => {
                   padding: "10px",
                 }}
               >
-                <h2>160</h2>
-                <h2>Predictors</h2>
+                <h2 style={{ color: "var(--color-primary)" }}>160</h2>
+                <h2 style={{ color: "#d17f1b" }}>Predictors</h2>
               </div>
             </Predictor>
           </InformationItem>
@@ -107,7 +107,7 @@ const Point = () => {
 export default Point;
 
 const Container = styled.div`
-  background-color: var(--color-primary);
+  background-color: #f1f1f1;
 `;
 
 const Details = styled.div`

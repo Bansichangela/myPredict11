@@ -15,11 +15,11 @@ const Landing = () => {
     opacity: !hasAnimated ? (inView ? 1 : 0) : 1,
     transform: !hasAnimated
       ? inView
-        ? "translateX(0)"
-        : "translateX(-100px)"
-      : "translateX(0)",
+        ? "translateY(0)"
+        : "translateY(-100px)"
+      : "translateY(0)",
     config: config.gentle,
-    from: { opacity: 0, transform: "translateX(-100%)" },
+    from: { opacity: 0, transform: "translateY(-100%)" },
     onRest: () => {
       if (inView && !hasAnimated) {
         setHasAnimated(true);
@@ -59,9 +59,13 @@ const BackgroundImage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./img/bgimg.webp");
+  background-image: url("./img/cricket-game.jpeg");
   background-size: cover;
-  z-index: -1; /* Send the background image to the bottom */
+  background-repeat: no-repeat;
+  @media (max-width: 1100px) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 `;
 
 const Div = styled.div`
@@ -76,10 +80,10 @@ const Container = styled.div`
   height: 80vh;
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 
-  @media (max-width: 990px) {
-    display: flex;
-    align-items: center;
+  @media (max-width: 1100px) {
+    flex-direction: row;
   }
 `;
 
@@ -91,6 +95,7 @@ const Content = styled.div`
 
 const LandingItem = styled(animated.div)`
   padding: 30px;
+
   @media (max-width: 990px) {
     padding: 0 0 0 0;
   }

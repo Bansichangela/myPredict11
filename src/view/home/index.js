@@ -2,11 +2,12 @@ import React from "react";
 import Header from "../common/Header";
 import Landing from "./Landing";
 import Footer from "../common/Footer";
-import Point from "./Point";
 import TopPredictor from "./TopPredictor";
 import Steps from "./Steps";
 import Match from "./Match";
 import Quality from "./Quality";
+import Count from "./Count";
+import Point from "./Point";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Steps />
       <Match />
       <Quality />
+      <Count />
       <Footer />
     </>
   );
