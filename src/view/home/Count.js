@@ -22,33 +22,34 @@ const Count = () => {
               <CountImg>
                 <img src="./img/totalprofite.png" alt="totalprofite" />
               </CountImg>
-              <count>
-                {CounterOn && (
-                  <CountUp
-                    start={0}
-                    end={36586}
-                    duration={2}
-                    delay={0}
-                    style={{ color: "#d17f1b" }}
-                  />
-                )}
-                <Text>Total Profit</Text>
-              </count>
-            </CountNum>
-            <CountNum>
-              <CountImg>
-                <img src="./img/tipster.png" alt="totaltipster" />
-              </CountImg>
+
               {CounterOn && (
                 <CountUp
                   start={0}
-                  end={586}
+                  end={36586}
                   duration={2}
                   delay={0}
                   style={{ color: "#d17f1b" }}
                 />
               )}
-              <Text>Total Tipster</Text>
+              <Text>Total Profit</Text>
+            </CountNum>
+            <CountNum>
+              <div style={{ alignItems: "center" }}>
+                <CountImg>
+                  <img src="./img/tipster.png" alt="totaltipster" />
+                </CountImg>
+                {CounterOn && (
+                  <CountUp
+                    start={0}
+                    end={586}
+                    duration={2}
+                    delay={0}
+                    style={{ color: "#d17f1b" }}
+                  />
+                )}
+                <Text>Total Tipster</Text>
+              </div>
             </CountNum>
             <CountNum>
               <CountImg>
@@ -105,7 +106,6 @@ const Container = styled.div`
 const Counts = styled.div`
   display: flex;
   justify-content: space-between;
-  // max-width: 80%;
   width: 100%;
   border-radius: 10px;
   margin: 0;
@@ -113,28 +113,40 @@ const Counts = styled.div`
   padding: 60px 0;
   text-align: center;
   margin-top: 60px;
-  @media (max-width: 400px) {
-    flex-direction: column;
-    gap: 30px;
-    padding: 10px 0;
+  @media (max-width: 815px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 470px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 345px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const CountNum = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 15px;
   font-size: 25px;
   font-weight: 500;
+  @media (max-width: 820px) {
+    align-items: center;
+    font-size: 23px;
+  }
   @media (max-width: 768px) {
-    font-size: 30px;
+    // font-size: 30px;
   }
   @media (max-width: 480px) {
-    font-size: 20px;
+    // font-size: 20px;
   }
 `;
 
 const Text = styled.p`
   dispklay: flex;
+  justify-content: space-between;
   color: var(--color-primary);
   font-size: 15px;
   font-weight: 700;
@@ -147,4 +159,5 @@ const CountImg = styled.div`
   width: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
