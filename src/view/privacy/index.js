@@ -1,18 +1,16 @@
 import React from "react";
+import Privacy from "./Privacy";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import About from "./About";
-import Count from "./Count";
 
-const Abouts = () => {
+const Privacys = () => {
   return (
     <>
       <Header />
-      <About />
-      <Count />
+      <Privacy />
       <Footer />
     </>
   );
 };
 
-export default Abouts;
+export default Privacys;

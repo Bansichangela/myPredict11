@@ -1,18 +1,16 @@
 import React from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import About from "./About";
-import Count from "./Count";
+import Terms from "./Terms";
 
-const Abouts = () => {
+const TermsConditions = () => {
   return (
     <>
       <Header />
-      <About />
-      <Count />
+      <Terms />
       <Footer />
     </>
   );
 };
 
-export default Abouts;
+export default TermsConditions;

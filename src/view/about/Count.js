@@ -11,7 +11,7 @@ const Count = () => {
   const averageHitRate = 50.0;
 
   return (
-    <div style={{ backgroundColor: "#f1f1f1" }}>
+    <div style={{ backgroundColor: "#f0f0f0" }}>
       <ScrollTrigger
         onEnter={() => setCounterOn(true)}
         onExit={() => setCounterOn(false)}
@@ -97,7 +97,6 @@ export default Count;
 const Container = styled.div`
   max-width: 70%;
   margin: 0 auto;
-  margin-bottom: 50px;
   @media (max-width: 600px) {
     max-width: 80%;
   }
@@ -112,7 +111,6 @@ const Counts = styled.div`
   color: white;
   padding: 60px 0;
   text-align: center;
-  margin-top: 60px;
   @media (max-width: 815px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

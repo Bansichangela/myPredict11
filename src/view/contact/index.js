@@ -1,18 +1,18 @@
 import React from "react";
+import Contact from "./Contact";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import About from "./About";
-import Count from "./Count";
+import Detail from "./Detail";
 
-const Abouts = () => {
+const Contacts = () => {
   return (
     <>
       <Header />
-      <About />
-      <Count />
+      <Contact />
+      <Detail />
       <Footer />
     </>
   );
 };
 
-export default Abouts;
+export default Contacts;

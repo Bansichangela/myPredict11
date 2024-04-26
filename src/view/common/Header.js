@@ -23,9 +23,9 @@ const Header = () => {
             <Menu>
               <CustomLink to="/">Home</CustomLink>
               <CustomLink to="/about">About Us</CustomLink>
-              <CustomLink to="/pages">Contact</CustomLink>
-              <CustomLink to="/blog">Privacy & policy</CustomLink>
-              <CustomLink to="/contact">Terms & condition</CustomLink>
+              <CustomLink to="/contact">Contact</CustomLink>
+              <CustomLink to="/privacy">Privacy & policy</CustomLink>
+              <CustomLink to="/condition">Terms & condition</CustomLink>
               <Button>
                 Find Tipster <i className="fa-solid fa-user"></i>
               </Button>
@@ -41,9 +41,11 @@ const Header = () => {
           <MobileMenuItem hidden={!isOpen}>
             <MobileCustomLink to="/">Home</MobileCustomLink>
             <MobileCustomLink to="/about">About Us</MobileCustomLink>
-            <MobileCustomLink to="/pages">Contact</MobileCustomLink>
-            <MobileCustomLink to="/blog">Privacy & policy</MobileCustomLink>
-            <MobileCustomLink to="/contact">Terms & condition</MobileCustomLink>
+            <MobileCustomLink to="/contact">Contact</MobileCustomLink>
+            <MobileCustomLink to="/privacy">Privacy & policy</MobileCustomLink>
+            <MobileCustomLink to="/condation">
+              Terms & condition
+            </MobileCustomLink>
             <MenuButton>
               Find Tipster <i className="fa-solid fa-user"></i>
             </MenuButton>

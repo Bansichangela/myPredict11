@@ -286,8 +286,6 @@
 
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
 const data = [
   {
     imageLink: "./img/profile1.png",
@@ -341,6 +339,7 @@ const Cards = () => {
           <PredictorProfile>
             <img
               src={item.imageLink}
+              alt="img"
               style={{
                 borderRadius: "100%",
                 width: "50px",
@@ -503,11 +502,6 @@ const PredictorPoint = styled.div`
     width: 100%;
     text-align: center;
   }
-`;
-
-const CustomLink = styled(Link)`
-  text-decoration: none;
-  color: white;
 `;
 
 const Button = styled.button`

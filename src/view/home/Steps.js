@@ -287,7 +287,7 @@
 // `;
 
 import React from "react";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 
@@ -370,7 +370,7 @@ export default Steps;
 
 const Container = styled.div`
   margin: 50px 0;
-  background-color: #f1f1f1;
+  background-color: #e8e8e8;
 `;
 
 const Details = styled.div`
