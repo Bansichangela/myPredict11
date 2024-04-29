@@ -460,14 +460,13 @@ const Title = styled.div`
   @media (max-width: 560px) {
     font-size: 42px;
   }
-  @media (max-width: 370px) {
-    font-size: 40px;
+  @media (max-width: 430px) {
+    font-size: 38px;
   }
 `;
 
 const SubTitle = styled.div`
   font-size: 20px;
-  font-weight: 600;
   padding-top: 20px;
   color: black;
   opacity: 0.8;
@@ -500,7 +499,6 @@ const Notice = styled.div`
 
 const NoticeLine = styled.div`
   font-size: 20px;
-  font-weight: 600;
   color: black;
   opacity: 0.8;
   padding-bottom: 20px;
@@ -517,7 +515,6 @@ const NoticeLine = styled.div`
 
 const Points = styled.div`
   font-size: 20px;
-  font-weight: 600;
   color: black;
   padding: 10px 0 10px 20px;
 `;

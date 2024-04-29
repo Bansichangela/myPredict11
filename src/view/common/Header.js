@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,7 +10,6 @@ const Header = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <HeaderContainer>
       <div style={{ backgroundColor: "var(--color-primary)" }}>
@@ -21,11 +21,21 @@ const Header = () => {
               </Link>
             </LogoBox>
             <Menu>
-              <CustomLink to="/">Home</CustomLink>
-              <CustomLink to="/about">About Us</CustomLink>
-              <CustomLink to="/contact">Contact</CustomLink>
-              <CustomLink to="/privacy">Privacy & policy</CustomLink>
-              <CustomLink to="/condition">Terms & condition</CustomLink>
+              <CustomLink to="/" activeClassName="active">
+                Home
+              </CustomLink>
+              <CustomLink to="/about" activeClassName="active">
+                About Us
+              </CustomLink>
+              <CustomLink to="/contact" activeClassName="active">
+                Contact
+              </CustomLink>
+              <CustomLink to="/privacy" activeClassName="active">
+                Privacy & policy
+              </CustomLink>
+              <CustomLink to="/condition" activeClassName="active">
+                Terms & condition
+              </CustomLink>
               <Button>
                 Find Tipster <i className="fa-solid fa-user"></i>
               </Button>
@@ -82,15 +92,15 @@ const LogoBox = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 310px;
+  width: 270px;
   @media (max-width: 1140px) {
-    width: 300px;
+    width: 250px;
   }
   @media (max-width: 690px) {
-    width: 290px;
+    width: 200px;
   }
   @media (max-width: 430px) {
-    width: 235px;
+    width: 150px;
   }
 `;
 
@@ -113,13 +123,17 @@ const MobileMenu = styled.div`
   }
 `;
 
-const CustomLink = styled(Link)`
+const CustomLink = styled(NavLink)`
   color: white;
   margin: 10px;
   display: block;
   text-decoration: none;
 
   &:hover {
+    color: #f4c566;
+  }
+
+  &.${(props) => props.activeClassName} {
     color: #f4c566;
   }
 `;
@@ -169,7 +183,6 @@ const MenuButton = styled.button`
 
 const MobileMenuItem = styled.div`
   position: absolute;
-  // top: 77px;
   left: 0;
   right: 0;
   display: flex;

@@ -374,6 +374,13 @@ const TopPredictor = () => {
           </div>
         </Title>
         <Boxes>
+          <Index>
+            <ProfileImg>Profile Image</ProfileImg>
+            <ProfileName>Name</ProfileName>
+            <ProfileRank>Rank</ProfileRank>
+            <ProfilePoints>Points</ProfilePoints>
+            <Profile2>Profile</Profile2>
+          </Index>
           <Cards />
         </Boxes>
       </Detail>
@@ -401,7 +408,7 @@ const Title = styled.div`
 const TitleName = styled.div`
   color: #0c0338;
   font-size: 50px;
-  margin: 90px 0 15px 0;
+  margin: 80px 0 15px 0;
   font-weight: 700;
   @media (max-width: 620px) {
     font-size: 40px;
@@ -440,6 +447,7 @@ const Predictor = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px;
+  gap: 20px;
   background-color: #e8e8e8;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -528,4 +536,38 @@ const Button = styled.button`
     width: 100%;
     text-align: center;
   }
+`;
+
+const Index = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+`;
+
+const ProfileName = styled.div`
+  // font-size: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const ProfileImg = styled.div`
+  // font-size: 20px;
+  text-align: center;
+`;
+
+const ProfileRank = styled.div`
+  // font-size: 20px;
+  text-align: center;
+`;
+
+const ProfilePoints = styled.div`
+  // font-size: 20px;
+  text-align: center;
+`;
+
+const Profile2 = styled.div`
+  // font-size: 20px;
+  text-align: center;
 `;

@@ -23,19 +23,25 @@ const Footer = () => {
             <QuickName>Quick Links</QuickName>
             <Menu>
               <p>
-                <CustomLink to="/">Home</CustomLink>
+                <CustomLink to="/" activeClassName="active">
+                  Home
+                </CustomLink>
               </p>
               <p>
-                <CustomLink to="/about">About Us</CustomLink>
+                <CustomLink to="/about" activeClassName="active">
+                  About Us
+                </CustomLink>
               </p>
               <p>
-                <CustomLink to="/pages">Contact</CustomLink>
+                <CustomLink to="/contact" activeClassName="active">
+                  Contact
+                </CustomLink>
               </p>
               <p>
-                <CustomLink to="/blog">Privacy & policy</CustomLink>
+                <CustomLink to="/privacy">Privacy & policy</CustomLink>
               </p>
               <p>
-                <CustomLink to="/contact">Terms & condition</CustomLink>
+                <CustomLink to="/condition">Terms & condition</CustomLink>
               </p>
             </Menu>
           </Quicklinks>
@@ -231,6 +237,9 @@ const ServiceMenu = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
+  &.${(props) => props.activeClassName} {
+    color: #f4
 `;
 
 const ServiceLink = styled(Link)`

@@ -7,30 +7,30 @@ const About = () => {
       <Details>
         <Title>About Us</Title>
         <Declaration>
-          <h4>
+          <p>
             MyPredict11 is the extra ordinary analytics tool for cricket, we are
             providing analysis for ground and players statistical data based on
             past performances.
-          </h4>{" "}
-          <h4>
+          </p>{" "}
+          <p>
             MyPredict11 is absolutely free platform to build World Beating
             Fantasy Cricket Teams.
-          </h4>{" "}
-          <h4>
+          </p>{" "}
+          <p>
             {" "}
             We are providing detailed statistical data to the user for choose
             best 11 players and earn points in MyPredict11 and also help to earn
             money from fantasy cricket platforms.{" "}
-          </h4>
-          <h4>
+          </p>
+          <p>
             We are providing bit of information to make winning teams for
             fantasy sports.{" "}
-          </h4>
-          <h4>
+          </p>
+          <p>
             Currently MyPredict11 is focusing on cricket contests to provide
             easiest, fastest and smartest way to make wining teams for fantasy
             cricket platforms.
-          </h4>
+          </p>
         </Declaration>
       </Details>
     </Container>

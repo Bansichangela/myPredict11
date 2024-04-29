@@ -358,8 +358,11 @@ const Title = styled.h2`
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 10px;
-  @media (max-width: 440px) {
-    font-size: 25px;
+  @media (max-width: 680px) {
+    font-size: 35px;
+  }
+  @media (max-width: 480px) {
+    font-size: 30px;
   }
 `;
 
@@ -368,8 +371,11 @@ const SubTitle = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
-  @media (max-width: 440px) {
-    font-size: 15px;
+  @media (max-width: 680px) {
+    font-size: 18px;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
   }
 `;
 
@@ -395,9 +401,17 @@ const Button = styled.button`
     background-color: white;
     transition: all 0.2s ease-in-out;
   }
-  @media (max-width: 440px) {
-    width: 30%;
+  @media (max-width: 1000px) {
+    width: 42%;
     font-size: 13px;
+  }
+  @media (max-width: 560px) {
+    width: 45%;
+    font-size: 12px;
+  }
+  @media (max-width: 470px) {
+    width: 50%;
+    font-size: 12px;
   }
 `;
 

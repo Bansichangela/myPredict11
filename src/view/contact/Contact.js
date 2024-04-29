@@ -187,7 +187,7 @@ const Box1 = styled(animated.div)`
 
 const Box2 = styled(animated.div)`
   max-width: 300px;
-  padding: 35px;
+  padding: 20px;
   font-size: 13px;
   color: #0c0338;
   background-color: white;

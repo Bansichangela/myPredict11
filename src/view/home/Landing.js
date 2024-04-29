@@ -55,17 +55,12 @@ const BlurredBackground = styled.div`
 
 const BackgroundImage = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./img/cricket-game.jpeg");
+  background-image: url("./img/athletic-soccer-player-kicking-ball-on-soccer-pitc-2022-12-16-19-23-28-utc-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  @media (max-width: 1100px) {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
+  filter: brightness(0.4);
 `;
 
 const Div = styled.div`
@@ -77,11 +72,10 @@ const Div = styled.div`
 `;
 
 const Container = styled.div`
-  height: 80vh;
+  height: 67vh;
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
-
+  flex-direction: row;
   @media (max-width: 1100px) {
     flex-direction: row;
   }
@@ -95,7 +89,6 @@ const Content = styled.div`
 
 const LandingItem = styled(animated.div)`
   padding: 30px;
-
   @media (max-width: 990px) {
     padding: 0 0 0 0;
   }

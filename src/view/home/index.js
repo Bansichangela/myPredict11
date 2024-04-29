@@ -7,14 +7,14 @@ import Steps from "./Steps";
 // import Match from "./Match";
 import Quality from "./Quality";
 // import Count from "./Count";
-// import Point from "./Point";
+import Point from "./Point";
 
 const Home = () => {
   return (
     <>
       <Header />
       <Landing />
-      {/* <Point /> */}
+      <Point />
       <TopPredictor />
       <Steps />
       {/* <Match /> */}

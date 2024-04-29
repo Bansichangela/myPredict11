@@ -36,7 +36,11 @@ const Point = () => {
                 <img
                   src="./img/averageteam.png"
                   alt="averageteam"
-                  style={{ maxWidth: "100px", height: "auto", padding: "20px" }}
+                  style={{
+                    maxWidth: "100px",
+                    height: "auto",
+                    padding: "20px",
+                  }}
                 ></img>
               </Averageimg>
               <div
@@ -80,7 +84,11 @@ const Point = () => {
                 <img
                   src="./img/predictor.png"
                   alt="predictor"
-                  style={{ maxWidth: "100px", height: "auto", padding: "20px" }}
+                  style={{
+                    maxWidth: "100px",
+                    height: "auto",
+                    padding: "20px",
+                  }}
                 ></img>
               </PredictorImg>
               <div
