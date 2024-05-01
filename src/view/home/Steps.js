@@ -327,7 +327,7 @@ const Steps = () => {
     <Container>
       <Details>
         <Title>
-          <Text>3 Easy Steps to find the best analyst</Text>
+          <Text>3 Easy Steps to Find the Best Analyst</Text>
         </Title>
         <Boxes>
           <Box1 ref={ref1} style={fadeIn1}>
@@ -370,7 +370,7 @@ export default Steps;
 
 const Container = styled.div`
   margin: 50px 0;
-  background-color: #e8e8e8;
+  background-color: #e3e3e3;
 `;
 
 const Details = styled.div`
@@ -385,9 +385,12 @@ const Title = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 700;
   color: #0c0338;
+  @media (max-width: 775px) {
+    font-size: 40px;
+  }
   @media (max-width: 587px) {
     font-size: 35px;
   }

@@ -4,9 +4,8 @@ import Landing from "./Landing";
 import Footer from "../common/Footer";
 import TopPredictor from "./TopPredictor";
 import Steps from "./Steps";
-// import Match from "./Match";
+import Match from "./Match";
 import Quality from "./Quality";
-// import Count from "./Count";
 import Point from "./Point";
 
 const Home = () => {
@@ -17,9 +16,8 @@ const Home = () => {
       <Point />
       <TopPredictor />
       <Steps />
-      {/* <Match /> */}
+      <Match />
       <Quality />
-      {/* <Count /> */}
       <Footer />
     </>
   );

@@ -115,8 +115,7 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.div`
-  font-size: 20px;
-  // font-weight: 600;
+  font-size: 17px;
   padding-top: 20px;
   color: black;
   opacity: 0.8;
@@ -130,7 +129,7 @@ const Notice = styled.div`
 `;
 
 const NoticeLine = styled.div`
-  font-size: 20px;
+  font-size: 17px;
   color: black;
   opacity: 0.8;
 `;

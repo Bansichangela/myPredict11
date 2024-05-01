@@ -1,55 +1,10 @@
-// import React from "react";
-// import styled from "styled-components";
-
-// const Detail = () => {
-//   return (
-//     <Container>
-//       <DetailBox>
-//         <Line1>Become a client</Line1>
-//         <Line2>Do you have any questions? </Line2>
-//         <Line2>Talk to our analysts</Line2>
-//         <Details>
-//             <Name></Name>
-//         </Details>
-//       </DetailBox>
-//     </Container>
-//   );
-// };
-
-// export default Detail;
-
-// const Container = styled.div`
-//   margin-top: 50px;
-// `;
-
-// const DetailBox = styled.div`
-//   max-width: 85%;
-//   margin: 0 auto;
-//   padding: 30px 0 30px 0;
-// `;
-
-// const Line1 = styled.div`
-//   font-size: 15px;
-//   font-weight: 700;
-//   color: #0c0338;
-//   padding-bottom: 15px;
-// `;
-
-// const Line2 = styled.div`
-//   font-size: 30px;
-//   line-height: 1.5;
-// `;
-
-// const Details = styled.div`
-
-// `;
-
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
   Alert,
   Box,
   FormControl,
   FormHelperText,
+  Grid,
   Snackbar,
   TextField,
 } from "@mui/material";
@@ -115,6 +70,7 @@ const CustomTextField = styled(TextField)`
       font-size: 15px;
     }
   }
+
 `;
 
 const Detail = () => {
@@ -164,151 +120,189 @@ const Detail = () => {
 
   return (
     <>
-      <Container>
-        <Content>
-          <FormBox>
-            <Title>Do you have any questions?</Title>
-            <SubTitle>Talk to our analysts</SubTitle>
-            <form ref={form}>
-              <Box sx={{ display: "flex", gap: 2 }}>
-                <FormControl fullWidth>
-                  <Controller
-                    name="userName"
-                    control={control}
-                    rules={{ required: true }}
-                    render={({ field: { value, onChange, onBlur } }) => (
-                      <CustomTextField
-                        type="text"
-                        label="Name"
-                        name="userName"
-                        value={value}
-                        onBlur={onBlur}
-                        onChange={onChange}
-                        error={Boolean(errors.userName)}
-                      />
-                    )}
-                  />
-                  {errors.userName && (
-                    <FormHelperText
-                      sx={{ color: "error.main", fontSize: "13px" }}
+      <Div>
+        <Container>
+          <Details>
+            <LeftBox>
+              <Content>
+                <FormBox>
+                  <Title>Do you have any questions?</Title>
+                  <SubTitle>Talk to our analysts</SubTitle>
+                  <form ref={form}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "16px",
+                      }}
                     >
-                      {errors.userName.message}
-                    </FormHelperText>
-                  )}
-                </FormControl>
-                <FormControl fullWidth>
-                  <Controller
-                    name="userEmail"
-                    control={control}
-                    rules={{ required: true }}
-                    render={({ field: { value, onChange, onBlur } }) => (
-                      <CustomTextField
-                        type="email"
-                        name="userEmail"
-                        label="Email"
-                        value={value}
-                        onBlur={onBlur}
-                        onChange={onChange}
-                        error={Boolean(errors.userEmail)}
-                      />
-                    )}
-                  />
-                  {errors.userEmail && (
-                    <FormHelperText
-                      sx={{ color: "error.main", fontSize: "13px" }}
-                    >
-                      {errors.userEmail.message}
-                    </FormHelperText>
-                  )}
-                </FormControl>
-              </Box>
-              <Box sx={{ display: "flex", gap: 2, padding: "13px 0" }}>
-                <FormControl fullWidth>
-                  <Controller
-                    name="userPhone"
-                    control={control}
-                    rules={{ required: true }}
-                    render={({ field: { value, onChange, onBlur } }) => (
-                      <CustomTextField
-                        type="tel"
-                        name="userPhone"
-                        label="Phone"
-                        value={value}
-                        onBlur={onBlur}
-                        onChange={onChange}
-                        error={Boolean(errors.userPhone)}
-                      />
-                    )}
-                  />
-                  {errors.userPhone && (
-                    <FormHelperText
-                      sx={{ color: "error.main", fontSize: "13px" }}
-                    >
-                      {errors.userPhone.message}
-                    </FormHelperText>
-                  )}
-                </FormControl>
-
-                <FormControl fullWidth>
-                  <Controller
-                    name="userSubject"
-                    control={control}
-                    rules={{ required: true }}
-                    render={({ field: { value, onChange, onBlur } }) => (
-                      <CustomTextField
-                        type="text"
-                        name="userSubject"
-                        label="Subject"
-                        value={value}
-                        onBlur={onBlur}
-                        onChange={onChange}
-                        error={Boolean(errors.userSubject)}
-                      />
-                    )}
-                  />
-                  {errors.userSubject && (
-                    <FormHelperText
-                      sx={{ color: "error.main", fontSize: "13px" }}
-                    >
-                      {errors.userSubject.message}
-                    </FormHelperText>
-                  )}
-                </FormControl>
-              </Box>
-              <FormControl fullWidth>
-                <Controller
-                  name="userMessage"
-                  control={control}
-                  rules={{ required: true }}
-                  render={({ field: { value, onChange, onBlur } }) => (
-                    <CustomTextField
-                      type="text"
-                      rows={4}
-                      multiline
-                      name="userMessage"
-                      label="Message"
-                      value={value}
-                      onBlur={onBlur}
-                      onChange={onChange}
-                      error={Boolean(errors.userMessage)}
-                    />
-                  )}
-                />
-                {errors.userMessage && (
-                  <FormHelperText
-                    sx={{ color: "error.main", fontSize: "13px" }}
-                  >
-                    {errors.userMessage.message}
-                  </FormHelperText>
-                )}
-              </FormControl>
-              <Btn>
-                <Button onClick={handleSubmit(onSubmit)}>Send message</Button>
-              </Btn>
-            </form>
-          </FormBox>
-        </Content>
-      </Container>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} sm={12} md={6}>
+                          <FormControl fullWidth>
+                            <Controller
+                              name="userName"
+                              control={control}
+                              rules={{ required: true }}
+                              render={({
+                                field: { value, onChange, onBlur },
+                              }) => (
+                                <CustomTextField
+                                  type="text"
+                                  label="Name"
+                                  name="userName"
+                                  value={value}
+                                  onBlur={onBlur}
+                                  onChange={onChange}
+                                  error={Boolean(errors.userName)}
+                                />
+                              )}
+                            />
+                            {errors.userName && (
+                              <FormHelperText
+                                sx={{ color: "error.main", fontSize: "13px" }}
+                              >
+                                {errors.userName.message}
+                              </FormHelperText>
+                            )}
+                          </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6}>
+                          <FormControl fullWidth>
+                            <Controller
+                              name="userEmail"
+                              control={control}
+                              rules={{ required: true }}
+                              render={({
+                                field: { value, onChange, onBlur },
+                              }) => (
+                                <CustomTextField
+                                  type="email"
+                                  name="userEmail"
+                                  label="Email"
+                                  value={value}
+                                  onBlur={onBlur}
+                                  onChange={onChange}
+                                  error={Boolean(errors.userEmail)}
+                                />
+                              )}
+                            />
+                            {errors.userEmail && (
+                              <FormHelperText
+                                sx={{ color: "error.main", fontSize: "13px" }}
+                              >
+                                {errors.userEmail.message}
+                              </FormHelperText>
+                            )}
+                          </FormControl>
+                        </Grid>
+                      </Grid>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} sm={12} md={6}>
+                          <FormControl fullWidth>
+                            <Controller
+                              name="userPhone"
+                              control={control}
+                              rules={{ required: true }}
+                              render={({
+                                field: { value, onChange, onBlur },
+                              }) => (
+                                <CustomTextField
+                                  type="tel"
+                                  name="userPhone"
+                                  label="Phone"
+                                  value={value}
+                                  onBlur={onBlur}
+                                  onChange={onChange}
+                                  error={Boolean(errors.userPhone)}
+                                />
+                              )}
+                            />
+                            {errors.userPhone && (
+                              <FormHelperText
+                                sx={{ color: "error.main", fontSize: "13px" }}
+                              >
+                                {errors.userPhone.message}
+                              </FormHelperText>
+                            )}
+                          </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6}>
+                          <FormControl fullWidth>
+                            <Controller
+                              name="userSubject"
+                              control={control}
+                              rules={{ required: true }}
+                              render={({
+                                field: { value, onChange, onBlur },
+                              }) => (
+                                <CustomTextField
+                                  type="text"
+                                  name="userSubject"
+                                  label="Subject"
+                                  value={value}
+                                  onBlur={onBlur}
+                                  onChange={onChange}
+                                  error={Boolean(errors.userSubject)}
+                                />
+                              )}
+                            />
+                            {errors.userSubject && (
+                              <FormHelperText
+                                sx={{ color: "error.main", fontSize: "13px" }}
+                              >
+                                {errors.userSubject.message}
+                              </FormHelperText>
+                            )}
+                          </FormControl>
+                        </Grid>
+                      </Grid>
+                      <FormControl fullWidth>
+                        <Controller
+                          name="userMessage"
+                          control={control}
+                          rules={{ required: true }}
+                          render={({ field: { value, onChange, onBlur } }) => (
+                            <CustomTextField
+                              type="text"
+                              rows={4}
+                              multiline
+                              name="userMessage"
+                              label="Message"
+                              value={value}
+                              onBlur={onBlur}
+                              onChange={onChange}
+                              error={Boolean(errors.userMessage)}
+                            />
+                          )}
+                        />
+                        {errors.userMessage && (
+                          <FormHelperText
+                            sx={{ color: "error.main", fontSize: "13px" }}
+                          >
+                            {errors.userMessage.message}
+                          </FormHelperText>
+                        )}
+                      </FormControl>
+                    </Box>
+                    <Btn>
+                      <Button onClick={handleSubmit(onSubmit)}>
+                        Send message
+                      </Button>
+                    </Btn>
+                  </form>
+                </FormBox>
+              </Content>
+            </LeftBox>
+            <RightBox>
+              <Image
+                src="./img/contactbox.jpg"
+                alt="sideimage"
+                style={{ margin: "auto" }}
+              />
+            </RightBox>
+          </Details>
+        </Container>
+      </Div>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={openSnackbar.open}
@@ -326,24 +320,61 @@ const Detail = () => {
 
 export default Detail;
 
+const Div = styled.div`
+  // background-image: linear-gradient(
+  //     rgba(255, 255, 255, 0.1),
+  //     rgba(255, 255, 255, 0.1)
+  //   ),
+  //   url(/img/top-view-football-with-copy-space.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  background-color: white;
+`;
+
 const Container = styled.div`
-  max-width: 85%;
+  max-width: 78%;
   margin: 0 auto;
 `;
 
 const Content = styled.div`
-  max-width: 50%;
   margin: 20px auto;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
   background-image: radial-gradient(rgb(26, 106, 104), rgba(0, 31, 100, 0.75)),
     url("./img/bg-01-min.jpg");
   background-position: center; /* Center the background image */
   overflow: hidden; /* Hide any overflowing content */
   position: relative;
   backdrop-filter: blur(10px);
+  @media (max-width: 900px) {
+    border-radius: 20px;
+  }
   @media (max-width: 440px) {
-    width: 95%;
+    width: 80%;
+  }
+`;
+
+const LeftBox = styled.div`
+  max-width: 50%;
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+  @media (max-width: 440px) {
+    max-width: 100%;
+  }
+`;
+
+const RightBox = styled.div`
+  max-width: 50%;
+  margin: 20px 0;
+  @media (max-width: 900px) {
+  }
+`;
+
+const Details = styled.div`
+  display: flex;
+  @media (max-width: 900px) {
+    justify-content: center;
   }
 `;
 
@@ -351,6 +382,18 @@ const FormBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  @media (max-width: 800px) {
+    display: grid;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h2`
@@ -383,7 +426,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
   background-color: white;
   color: var(--color-primary);
   margin: 15px;
@@ -402,11 +445,11 @@ const Button = styled.button`
     transition: all 0.2s ease-in-out;
   }
   @media (max-width: 1000px) {
-    width: 42%;
+    width: 45%;
     font-size: 13px;
   }
   @media (max-width: 560px) {
-    width: 45%;
+    width: 47%;
     font-size: 12px;
   }
   @media (max-width: 470px) {

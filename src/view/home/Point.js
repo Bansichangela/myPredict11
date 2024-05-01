@@ -14,7 +14,9 @@ const Point = () => {
                 color: "var(--color-primary)",
               }}
             >
-              <h2>The Numbers Don't Lie</h2>
+              <div style={{ fontSize: "48px", fontWeight: "700" }}>
+                The Numbers Don't Lie
+              </div>
             </div>
             <div
               style={{
@@ -128,7 +130,7 @@ const Title = styled.div`
   margin: 0 auto;
   padding: 50px 0 30px 0;
   color: black;
-  font-size: 33px;
+  // font-size: 50px;
   @media (max-width: 1130px) {
     font-size: 30px;
     @media (max-width: 645px) {

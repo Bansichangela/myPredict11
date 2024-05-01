@@ -334,6 +334,23 @@ const data = [
 const Cards = () => {
   return (
     <>
+      <Index>
+        <PredictorName style={{ width: "7%" }}>
+          <p></p>
+        </PredictorName>
+        <PredictorName style={{ color: "#0c0338" }}>
+          <p>Name</p>
+        </PredictorName>
+        <PredictorRank style={{ color: "#0c0338" }}>
+          <p>Rank</p>
+        </PredictorRank>
+        <PredictorPoint style={{ color: "#0c0338" }}>
+          <p>Points</p>
+        </PredictorPoint>
+        <PredictorName style={{ width: "19%" }}>
+          <p></p>
+        </PredictorName>
+      </Index>
       {data.map((item, index) => (
         <Predictor key={index}>
           <PredictorProfile>
@@ -351,8 +368,18 @@ const Cards = () => {
           <PredictorName>
             <p>{item.name}</p>
           </PredictorName>
-          <PredictorRank>{item.rank}</PredictorRank>
-          <PredictorPoint>{item.points}</PredictorPoint>
+          <PredictorRank>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Span>Rank : </Span>
+              <span>{item.rank}</span>
+            </div>
+          </PredictorRank>
+          <PredictorPoint>
+            <div>
+              <Span>Points : </Span>
+              <span>{item.points}</span>
+            </div>
+          </PredictorPoint>
           <Button>{item.Link}</Button>
         </Predictor>
       ))}
@@ -374,13 +401,6 @@ const TopPredictor = () => {
           </div>
         </Title>
         <Boxes>
-          <Index>
-            <ProfileImg>Profile Image</ProfileImg>
-            <ProfileName>Name</ProfileName>
-            <ProfileRank>Rank</ProfileRank>
-            <ProfilePoints>Points</ProfilePoints>
-            <Profile2>Profile</Profile2>
-          </Index>
           <Cards />
         </Boxes>
       </Detail>
@@ -389,6 +409,13 @@ const TopPredictor = () => {
 };
 
 export default TopPredictor;
+
+const Span = styled.span`
+  display: none;
+  @media (max-width: 900px) {
+    display: block;
+  }
+`;
 
 const Container = styled.div`
   margin-top: 50px;
@@ -407,7 +434,7 @@ const Title = styled.div`
 
 const TitleName = styled.div`
   color: #0c0338;
-  font-size: 50px;
+  font-size: 48px;
   margin: 80px 0 15px 0;
   font-weight: 700;
   @media (max-width: 620px) {
@@ -458,7 +485,7 @@ const Predictor = styled.div`
   transition: 0.3s ease-in-out;
   &:hover {
     -webkit-transform: scale(1.02);
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   @media (max-width: 900px) {
     flex-direction: column;
@@ -523,7 +550,6 @@ const Button = styled.button`
   cursor: pointer;
   border: 2px solid var(--color-primary);
   border-radius: 50px;
-
   transition: all 1s;
   &:hover {
     color: white;
@@ -540,34 +566,13 @@ const Button = styled.button`
 
 const Index = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  font-size: 20px;
-`;
-
-const ProfileName = styled.div`
-  // font-size: 20px;
-  display: flex;
   align-items: center;
-`;
-
-const ProfileImg = styled.div`
-  // font-size: 20px;
-  text-align: center;
-`;
-
-const ProfileRank = styled.div`
-  // font-size: 20px;
-  text-align: center;
-`;
-
-const ProfilePoints = styled.div`
-  // font-size: 20px;
-  text-align: center;
-`;
-
-const Profile2 = styled.div`
-  // font-size: 20px;
-  text-align: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #e2e2e2;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;

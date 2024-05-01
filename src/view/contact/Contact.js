@@ -140,7 +140,7 @@ const Container = styled.div`
 `;
 
 const AllBox = styled.div`
-  background-color: #eef7fb;
+  background-color: #e8f4f9;
 `;
 
 const Details = styled.div`
@@ -183,6 +183,7 @@ const Box1 = styled(animated.div)`
   background-color: white;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 const Box2 = styled(animated.div)`
@@ -193,6 +194,7 @@ const Box2 = styled(animated.div)`
   background-color: white;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 const Box3 = styled(animated.div)`
@@ -203,4 +205,5 @@ const Box3 = styled(animated.div)`
   background-color: white;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;

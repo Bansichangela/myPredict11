@@ -38,10 +38,14 @@ const Footer = () => {
                 </CustomLink>
               </p>
               <p>
-                <CustomLink to="/privacy">Privacy & policy</CustomLink>
+                <CustomLink to="/privacy" activeClassName="active">
+                  Privacy & policy
+                </CustomLink>
               </p>
               <p>
-                <CustomLink to="/condition">Terms & condition</CustomLink>
+                <CustomLink to="/condition" activeClassName="active">
+                  Terms & condition
+                </CustomLink>
               </p>
             </Menu>
           </Quicklinks>
@@ -210,7 +214,12 @@ const CustomLink = styled(Link)`
   color: white;
   font-size: 14px;
   text-decoration: none;
+
   &:hover {
+    color: #f4c566;
+  }
+
+  &.${(props) => props.activeClassName} {
     color: #f4c566;
   }
 `;
